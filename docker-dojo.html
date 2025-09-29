@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Docker Dojo</title>
+    <link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <main>
+        <h1>Welcome to the Docker Dojo</h1>
+		<p>
+			"Was Sie schon immer über Docker wissen wollten, aber nie zu fragen wagten" &#128521
+		</p>
+		<h2>Useful Links:</h2>
+		<table>
+			<tr>
+				<th>Link</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td><a href="https://docs.docker.com/" target="_blank">Docker Documentation</a></td>
+				<td> - Official Docker documentation.</td>
+			</tr>
+			<tr>
+				<td><a href="https://www.docker.com/get-started" target="_blank">Docker Get Started</a></td>
+				<td> - Beginner's guide to Docker.</td>
+			</tr>
+			<tr>
+				<td><a href="https://www.docker.com/" target="_blank">Docker</a></td>
+				<td> - Official Docker website.</td>
+			</tr>
+			<tr>
+				<td><a href="https://hub.docker.com/" target="_blank">Docker Hub</a></td>
+				<td> - Repository for Docker images.</td>
+			</tr>
+			<tr>
+				<td><a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a></td>
+				<td> - Download Docker Desktop for Windows or Mac.</td>
+			</tr>
+			<tr>
+				<td><a href="https://docs.docker.com/get-started/" target="_blank">Get Started with Docker</a></td>
+				<td> - Comprehensive guide to get started with Docker.</td>
+
+			</tr>
+		</table>
+		<h2> Just in case you donot docker installed jet</h2>
+			<table>
+				<tr>
+					<td>
+						<h3> Please checkout this web site: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="https://labs.play-with-docker.com/" > Play with docker </a>
+					</td>
+				</tr>
+			</table>
+		<h2>Right after docker installation:</h2>
+			<p>
+				<img src="images/docker-containrt-engine.png" alt="Docker Logo" width="300" height="200">
+			</p>
+			<table>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_001"> docker -v </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_001')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_002"> docker version </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_002')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_003"> docker info </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_004"> docker help </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_004')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+			</table>
+		<h2>First Steps:</h2>
+			<p>
+				<img src="images/crane.png" alt="Crane Logo" width="200" height="200">
+			</p>
+			<table>
+				<tr>
+					<td>
+					<h3>Pulling the first immage:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_005">docker pull hello-world</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_004')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_006">docker pull hello-world:nanoserver-ltsc2025</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_006')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>Running the first container:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code  id="codeBlock_007">docker image ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_007')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+			</table> 
+
+		<h2>Testing your Docker Desktop installation: </h2>
+			<p>
+				<img src="images/Testing-Docker.png" alt="Testing Docker Logo" width="200" height="200">
+			</p>
+			<table>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal image" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_008"> docker image pull nginx </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_008')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_009"> docker container run -d --name nginx-test -p 8080:80 nginx </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_009')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_010"> docker container ps </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_010')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please test in your web browser: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://localhost:8080/" > http://localhost:8080/ </a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Clean up afterwards: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_011"> docker container stop nginx-test </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_011')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_012"> docker container rm nginx-test </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_012')"><i class="bi bi-clipboard"></i> Copy</button>
+					<td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_013"> docker image rm nginx </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_013')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+			</table>
+		<h2> Learning by doing </h2>
+			<table>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_14"> docker run -dp 80:80 docker/getting-started </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_14')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please test in your web browser: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://localhost" > http://localhost </a>
+					</td>
+				</tr>
+			</table>
+		<h2> Hello World Tratition</h2>
+			<p>
+				<img src="images/Hello-World.png" alt="Hello-World Logo" width="300" height="200">
+			</p>
+			<table>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_15">docker pull hello-world</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_15')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Checking the image status: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_16">docker images</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_16')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_17">docker image ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_17')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_18">docker run hello-world</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_18')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Checking the container status: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_19">docker container ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_19')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_20">docker container ls -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_20')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_21">docker ps</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_21')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_22">docker ps -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_22')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_23">docker run --name hello1 hello-world</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_23')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_24">docker run --rm hello-world</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_24')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+			</table>
+		<h2> Linux on the Rocks </h2>
+			<p>
+				<img src="images/linux-logo.png" alt="Linux Logo" width="150" height="150">
+			</p>
+			<table>
+				<tr>
+					<td>
+						<h3> Pulling the ubuntu image. &#128039;</h3>
+					</td>
+					<td>
+						<img src="images/ubuntu-linux.png" alt="Ubuntu Logo" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>	
+						<h3> Please enter on commadline: </h3>
+					</td>	
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_25">docker pull ubuntu</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_25')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Checking the image status: &#128039; </h3>
+					<td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_26">docker image ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_26')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Starting a new ubuntu container: &#128640; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_27">docker run -it --name ubuntu-test ubuntu bash</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_27')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Inside the ubuntu container: &#128521;</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_28">apt update</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_28')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_29">apt install -y curl</code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_29')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_30">curl --version</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_30')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Exiting the ubuntu container: &#128519; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_31">exit</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_31')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</td>
+				<tr>
+					<td>
+					<h3> Checking the container status: &#128039;</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_32">docker container ls -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_32')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>,
+				<tr>
+					<td>
+					<h3> Restarting the ubuntu container: &#128640; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_33">docker container start -ai ubuntu-test</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_33')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_34">exit</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_34')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Pulling the debian image: &#128039;</h3>
+					</td>
+					<td>
+						<img src="images/debian-linux.png" alt="Debian Logo" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_35">docker pull debian</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_35')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Checking the image status: &#128039;</h3>
+					<td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker image ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Starting a new debian container: &#128640; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker run -it --name debian-test debian bash</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Inside the debian container: &#128521; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">apt update</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">apt install -y curl</code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">curl --version</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Exiting the debian container: &#128519;</h3>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">exit</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Checking the container status: &#128039; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker container ls -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</td>
+				<tr>
+					<td>
+					<h3> Pulling the alpine image: &#128039; </h3>
+					</td>
+					<td>
+						<img src="images/alpine-linux.png" alt="Alpine Linux Logo" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker pull alpine</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Checking the image status: &#128039; </h3>
+					<td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker image ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Starting a new alpine container: &#128640; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker run -it --name alpine-test alpine sh</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Inside the alpine container: &#128521; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">apk update</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Exiting the alpine container: &#128519; </h3>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">exit</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</td>
+			</table>
+	
+<!---------------- Database section begins ----------------------------------------------->
+		
+		<h2> SQL or NoSQL thats here the questiom </h2>
+			<p>
+				<img src="images/databases.png" alt="Databases" width="200" height="200">
+			</p>
+			<table>
+				<tr>
+					<td>
+						<h3> Pulling the first three postgres images. &#128024; </h3>
+					</td>
+					<td>
+						<img src="images/docker-postgres.png" alt="Docker Postgres Logo" width="400" height="200">
+					</td>
+				</tr>
+				<tr>
+					<td>	
+						<h3> Please enter on commadline: </h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal image" width="150" height="150">
+					</td>	
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker pull postgres:17-trixie</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker pull postgres:17-bookworm</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker pull postgres:17-alpine</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------------Creating Containers--------------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Creating the first three postgres containers. &#128024; </h3>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker create --name pstrixie postgres:17-trixie</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker create --name psbookworm postgres:17-bookworm</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker create --name psalpine postgres:17-alpine</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------Starting Containers------------------------------------------------------------>
+				<tr>
+					<td>
+						<h3> Starting the three postgres containers: &#128024; </h3>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker start pstrixie </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker start psbookworm </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker start psalpine </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+
+				<!-------------Stoping Containers------------------------------------------------------------>
+
+				<tr>
+					<td>
+						<h3> Stopping the three postgres containers: &#128024; </h3>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker stop pstrixie </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker stop psbookworm </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker stop psalpine </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+
+				<!-------------- MySQL Section begins -------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Pulling the first two mysql images. &#128044; </h3>
+					</td>
+					<td>
+						<img src="images/mysql-docker.jpeg" alt="Docker MsSQL Logo" width="400" height="200">
+					</td>
+				</tr>
+				<tr>
+					<td>	
+						<h3> Please enter on commadline: </h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal image" width="150" height="150">
+					</td>	
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker pull mysql:9</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker pull mysql:8</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------------Creating Containers--------------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Creating the first two MySQL containers. &#128044; </h3>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker create --name mysql9 mysql:9 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker create --name mysql9 mysql:9 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------------Starting Containers--------------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Starting the two MySQL containers. &#128044; </h3>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker start mysql9 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker start mysql8 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------------Stoping Containers--------------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Stoping the two MySQL containers. &#128044; </h3>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker stop mysql9 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker stop mysql8 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!------------------MariaDB section begins ---------------->
+				<tr>
+					<td>
+						<h3> Pulling the first two mariadb images. &#x1f9ad;; </h3>
+					</td>
+					<td>
+						<img src="images/docker-mariadb.png" alt="Docker MariaDB Logo" width="400" height="200">
+					</td>
+				</tr>
+				<tr>
+					<td>	
+						<h3> Please enter on commadline: &#x1f9ad; </h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal image" width="150" height="150">
+					</td>	
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker pull mariadb:12</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker pull mariadb:11</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------------Creating Containers--------------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Creating the first two mariadb containers. &#x1f9ad; </h3>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker create --name maria12 mariadb:12 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker create --name maria11 mariadb:11 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------------Starting Containers--------------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Starting the two mariadb containers. &#x1f9ad; </h3>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker start maria12 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker start maria11 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------------Stoping Containers--------------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Stoping the two mariadb containers. &#x1f9ad; </h3>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker stop maria12 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker stop maria11 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!---------------------------MongoDB Section begins------------------------------------>
+				<tr>
+					<td>
+						<h3> Pulling the first mongodb image. &#x1f343;</h3>
+					</td>
+					<td>
+						<img src="images/MongoDB-Docker.jpeg" alt="Docker MongoDB Logo" width="400" height="200">
+					</td>
+				</tr>
+				<tr>
+					<td>	
+						<a href="https://www.mongodb.com/resources/products/compatibilities/docker">A helpful mongodb on docker tutorial.</a>
+					</td>
+				</tr>
+				<tr>
+					<td>	
+						<h3> Please enter on commadline: &#x1f343;</h3>
+					</td>	
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal image" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker pull mongodb/mongodb-community-server:7.0-ubuntu2204</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------------Creating Containers--------------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Creating the first MongoDB container. &#x1f343; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker create --name mongodb01 mongodb/mongodb-community-server:7.0-ubuntu2204 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------------Starting Containers--------------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Starting the MongoDB container. &#x1f9ad; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker start mongodb01 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<!-------------------Stoping Containers--------------------------------------------------------->
+				<tr>
+					<td>
+						<h3> Stoping the MongoDB container. &#x1f9ad; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker stop mongodb01 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+			</table>
+	<h2>Mach dir die Welt wie sie dir gefällt: Docker-Compose &#128105; &#x1F6A7;</h2>
+	<h2>Mach dir die Welt wie sie dir gefällt: Dockerfile &#x1f477; &#x1F6A7;</h2>
+	<hr>
+	<h2> Total Cleanup Afterwards </h2>
+		<table>
+			<tr>
+				<td>
+				<pre><code id="codeBlock">docker images</code></pre>
+				</td>
+				<td> 
+				<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<pre><code id="codeBlock">docker ps</code></pre>
+				</td>
+				<td>
+				<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<pre><code id="codeBlock">docker image ls</code></pre>
+				</td>
+				<td>
+				<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<pre><code id="codeBlock">docker image ls -q</code></pre>
+				</td>
+				<td>
+				<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<pre><code id="codeBlock">docker image rm $(docker image ls -q)</code></pre>
+				</td>
+				<td>
+				<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>Always remove containers first:</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<pre><code id="codeBlock">docker container rm $(docker container ls -aq)</code></pre>
+				</td>
+				<td>
+				<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<pre><code id="codeBlock">docker container rm -f $(docker container ls -aq)</code></pre>
+				</td>
+				<td>
+				<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<pre><code id="codeBlock"></code></pre>
+				</td>
+				<td>
+				<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+				</td>
+			</tr>
+			</table>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

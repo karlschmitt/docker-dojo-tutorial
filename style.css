@@ -1,0 +1,25 @@
+body {
+  background: black;
+  color: cyan;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+}
+
+pre {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  background-color: grey;
+  color: lightgreen;
+  border: 1px solid #e9ecef;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.copy-btn {
+  background: lightblue;
+  position: relative;
+  top: 0.5rem;
+  right: 0.5rem;
+}
