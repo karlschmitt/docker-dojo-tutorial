@@ -47,7 +47,7 @@
 
 			</tr>
 		</table>
-		<h2> Just in case you donot docker installed jet</h2>
+		<h2> Just in case you don't have docker installed jet</h2>
 			<table>
 				<tr>
 					<td>
@@ -65,6 +65,14 @@
 				<img src="images/docker-containrt-engine.png" alt="Docker Logo" width="300" height="200">
 			</p>
 			<table>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
 				<tr>
 					<td>
 					<pre><code id="codeBlock_001"> docker -v </code></pre>
@@ -105,7 +113,15 @@
 			<table>
 				<tr>
 					<td>
-					<h3>Pulling the first immage:</h3>
+					<h3>Pulling the first images: &#9888; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
 					</td>
 				</tr>
 				<tr>
@@ -126,12 +142,46 @@
 				</tr>
 				<tr>
 					<td>
-					<h3>Running the first container:</h3>
+					<h3>List the containers:</h3>
 					</td>
 				</tr>
 				<tr>
 					<td>
 					<pre><code  id="codeBlock_007">docker image ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_007')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr> 
+				<tr>
+					<td>
+					<h3>Running the first Hello World Docker container:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code  id="codeBlock_007">docker run hello-world:nanoserver-ltsc2025</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_007')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>Removing the Hello Word Docker images:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code  id="codeBlock_007">docker image rm hello-world:latest</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_007')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code  id="codeBlock_007">docker image rm hello-world:nanoserver-ltsc2025</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_007')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -154,7 +204,16 @@
 				</tr>
 				<tr>
 					<td>
-						<pre><code id="codeBlock_008"> docker image pull nginx </code></pre>
+						<pre><code id="codeBlock_008"> docker image pull nginx:1.29-bookworm </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_008')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<pre><code id="codeBlock_008"> docker image pull nginx:1.29-alpine </code></pre>
 					</td>
 					<td>
 						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_008')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -162,7 +221,15 @@
 				</tr>
 				<tr>
 					<td>
-						<pre><code id="codeBlock_009"> docker container run -d --name nginx-test -p 8080:80 nginx </code></pre>
+						<pre><code id="codeBlock_009"> docker container run -d --name nginx-test1 -p 8080:80 nginx:1.29-bookworm </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_009')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_009"> docker container run -d --name nginx-test2 -p 8081:80 nginx:1.29-alpine </code></pre>
 					</td>
 					<td>
 						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_009')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -188,12 +255,17 @@
 				</tr>
 				<tr>
 					<td>
+						<a href="http://localhost:8081/" > http://localhost:8081/ </a>
+					</td>
+				</tr>	
+				<tr>
+					<td>
 						<h3> Clean up afterwards: </h3>
 					</td>
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_011"> docker container stop nginx-test </code></pre>
+					<pre><code id="codeBlock_011"> docker container stop nginx-test1 </code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_011')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -201,7 +273,15 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_012"> docker container rm nginx-test </code></pre>
+					<pre><code id="codeBlock_011"> docker container stop nginx-test2 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_011')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_012"> docker container rm nginx-test1 </code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_012')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -209,7 +289,23 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_013"> docker image rm nginx </code></pre>
+					<pre><code id="codeBlock_012"> docker container rm nginx-test2 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_012')"><i class="bi bi-clipboard"></i> Copy</button>
+					<td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_013"> docker image rm nginx:1.29-bookworm </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_013')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_013"> docker image rm nginx:1.29-alpine </code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_013')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -260,7 +356,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_015">docker pull hello-world</code></pre>
+					<pre><code id="codeBlock_015">docker pull hello-world:linux</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_015')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -289,7 +385,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_018">docker run hello-world</code></pre>
+					<pre><code id="codeBlock_018">docker run hello-world:linux</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_018')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -334,7 +430,12 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_023">docker run --name hello1 hello-world</code></pre>
+						<h3> Give the container a name: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_023">docker run --name hello1 hello-world:linux</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_023')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -342,10 +443,65 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_024">docker run --rm hello-world</code></pre>
+						<h3> Remove the container right after execution: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_024">docker run --rm hello-world:linux</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_024')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Get an overview again: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_019">docker container ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_019')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_020">docker container ls -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_020')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_021">docker ps</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_021')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_022">docker ps -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_022')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's clean up a litte bit: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_019">docker container remove hello1</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_019')"><i class="bi bi-clipboard"></i> Copy</button>
 					</td>
 				</tr>
 			</table>
@@ -372,7 +528,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_025">docker pull ubuntu</code></pre>
+					<pre><code id="codeBlock_025">docker pull ubuntu:24.04</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_025')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -398,7 +554,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_027">docker run -it --name ubuntu-test ubuntu bash</code></pre>
+					<pre><code id="codeBlock_027">docker run -it --name ubuntu-test ubuntu:24.04 bash</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_027')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -407,6 +563,14 @@
 				<tr>
 					<td>
 						<h3> Inside the ubuntu container: &#128521;</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_os-release_028">cat /etc/os-release</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_os-release_028')"><i class="bi bi-clipboard"></i> Copy</button>
 					</td>
 				</tr>
 				<tr>
@@ -490,7 +654,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_035">docker pull debian</code></pre>
+					<pre><code id="codeBlock_035">docker pull debian:12</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_035')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -516,7 +680,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_037">docker run -it --name debian-test debian bash</code></pre>
+					<pre><code id="codeBlock_037">docker run -it --name debian-test debian:12 bash</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_037')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -588,7 +752,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock">docker pull alpine</code></pre>
+					<pre><code id="codeBlock">docker pull alpine:3.22</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
@@ -614,7 +778,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_044">docker run -it --name alpine-test alpine sh</code></pre>
+					<pre><code id="codeBlock_044">docker run -it --name alpine-test alpine:3.22 sh</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_044')"><i class="bi bi-clipboard"></i> Copy</button>
