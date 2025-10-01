@@ -861,8 +861,278 @@
 					</td>
 				</td>
 			</table>
-	
-<!---------------- Database section begins ----------------------------------------------->
+<!---------------- Lifecycle section begins here ---------------------------------------------->
+		<h2> Lifecycle of a Docker Container </h2>
+			<p>
+				<img src="images/lifecycle.png" alt="Lifecycle image" width="200" height="200">
+			</p>
+			<table>
+				<tr>
+					<td>
+					<h3>1. List available images:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker images</code></pre>
+						</td>
+						<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+						</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>2. Pull target image if not already available: &#128521; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker pull ubuntu/python:3.13-25.04_stable</code></pre>
+						</td>
+						<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>3. Create container from image:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker create --name pythonworld ubuntu/python:3.13-25.04_stable</code></pre>
+						</td>
+						<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_lifecycle_003">docker container ls -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>4. Start container:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker start pythonworld </code></pre>
+						</td>
+						<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_lifecycle_004">docker ps</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_004')"><i class="bi bi-clipboard"></i> Copy</
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_lifecycle_005">docker inspect pythonworld</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_005')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>5. Debug container: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker logs -f pythonworld </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>6. Use container: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker exec -it pythonworld python3 </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>7. Stop container:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker stop pythonworld </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>8. Restart container:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker restart pythonworld </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>9. Pause container:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker pause pythonworld </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>10. Unpause container:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker unpause pythonworld </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3>11. Remove container:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> First stop the container before removing: &#128521; <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+		 		<tr>
+					<td>
+					<pre><code id="codeBlock_lifecycle_001">docker stop pythonworld</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_001')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_lifecycle_002">docker rm pythonworld</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_002')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+			</table>
+<!---------------- Database section begins here ----------------------------------------------->
 		
 		<h2> SQL or NoSQL thats here the questiom </h2>
 			<p>
