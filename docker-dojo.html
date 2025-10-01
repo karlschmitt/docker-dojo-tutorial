@@ -134,7 +134,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_006">docker pull hello-world:nanoserver-ltsc2025</code></pre>
+					<pre><code id="codeBlock_006">docker pull hello-world:linux</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_006')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -160,10 +160,36 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code  id="codeBlock_007">docker run hello-world:nanoserver-ltsc2025</code></pre>
+					<pre><code  id="codeBlock_007">docker run hello-world:linux</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_007')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>Always remove the containers first, therefore list the containers:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code  id="codeBlock_removing_001">docker container ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_removing_001')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3>Remove the Hello Word Docker containers by there container names:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code  id="codeBlock_removing_001">docker container remove ...</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_removing_001')"><i class="bi bi-clipboard"></i> Copy</button>
 					</td>
 				</tr>
 				<tr>
@@ -173,18 +199,18 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code  id="codeBlock_007">docker image rm hello-world:latest</code></pre>
+					<pre><code  id="codeBlock_removing_001">docker image rm hello-world:latest</code></pre>
 					</td>
 					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_007')"><i class="bi bi-clipboard"></i> Copy</button>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_removing_001')"><i class="bi bi-clipboard"></i> Copy</button>
 					</td>
 				</tr>
 				<tr>
 					<td>
-					<pre><code  id="codeBlock_007">docker image rm hello-world:nanoserver-ltsc2025</code></pre>
+					<pre><code  id="codeBlock_removing_002">docker image rm hello-world:linux</code></pre>
 					</td>
 					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_007')"><i class="bi bi-clipboard"></i> Copy</button>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_removing_001')"><i class="bi bi-clipboard"></i> Copy</button>
 					</td>
 				</tr>
 			</table> 
@@ -245,7 +271,31 @@
 				</tr>
 				<tr>
 					<td>
-						<h3> Please test in your web browser: </h3>
+						<h3> Please enter on commadline of your host system: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal image" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_010"> curl -I localhost:8080 </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_010')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_010"> curl -I localhost:8081 </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_010')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> In case you can run a browser on your host system, please test in your web browser: </h3>
 					</td>
 				</tr>
 				<tr>
