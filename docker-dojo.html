@@ -688,10 +688,56 @@
 				</tr>
 				<tr>
 					<td>
+					<h3> The good thing is the changes remain in the ubuntu container: &#x1F4BC; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_034">which curl</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_034')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_034">history</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_034')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/changes-remain-in-ubuntu-test.png" alt="Changes remain." width="300" height="200">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Exiting the ubuntu container for good: &#128519; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
 					<pre><code id="codeBlock_034">exit</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_034')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> However, the ubuntu image remains unchanged! 	&#x26a0; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							Only the container has changed, not the image! <br>
+							To change the image, you have to create a new image based on the changed container. <br>
+							When you start a new container from the unchanged image, the changes are gone. <br>
+							This is a key concept of Docker!
+						</p>
 					</td>
 				</tr>
 				<tr>
@@ -911,6 +957,14 @@
 				</tr>
 				<tr>
 					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker image ls/code></pre>
+						</td>
+						<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
 					<h3>3. Create container from image:</h3>
 					</td>
 				</tr>
@@ -1020,6 +1074,53 @@
 				</tr>
 				<tr>
 					<td>
+						<h3> You should now be inside the python3 interpreter: &#128521; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">python3 --version</code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">print("Hello Docker World!")</code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3>To exit the python interpreter and the Docker container enter:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">quit() </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3>To verify that the Docker container is still runnig::</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker ps </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
 					<h3>7. Stop container:</h3>
 					</td>
 				</tr>
@@ -1034,6 +1135,27 @@
 				<tr>
 					<td>
 						<pre><code id="codeBlock_lifecycle_003">docker stop pythonworld </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3>To verify that the Docker container has stoped::</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker ps </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker ps -a </code></pre>
 					</td>
 					<td>
 						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1062,6 +1184,19 @@
 				</tr>
 				<tr>
 					<td>
+						<h3>To verify that the Docker container is again up and running:::</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker ps </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
 					<h3>9. Pause container:</h3>
 					</td>
 				</tr>
@@ -1076,6 +1211,19 @@
 				<tr>
 					<td>
 						<pre><code id="codeBlock_lifecycle_003">docker pause pythonworld </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3>To verify that the Docker container is pausing:::</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker ps </code></pre>
 					</td>
 					<td>
 						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1104,6 +1252,19 @@
 				</tr>
 				<tr>
 					<td>
+						<h3>To verify that the Docker container is again up and running:::</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_lifecycle_003">docker ps </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<h3>11. Remove container:</h3>
 					</td>
 				</tr>
@@ -1125,7 +1286,47 @@
 				</tr>
 				<tr>
 					<td>
+						<h3> Verify that the container has realy stopped: &#128521; <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+		 		<tr>
+					<td>
+					<pre><code id="codeBlock_lifecycle_001">docker ps</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_001')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Now invoke the remove command: &#128521; <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
 					<pre><code id="codeBlock_lifecycle_002">docker rm pythonworld</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_002')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Verify that the container was actually removed: &#128521; <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_lifecycle_002">docker container ls -a</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_002')"><i class="bi bi-clipboard"></i> Copy</button>
