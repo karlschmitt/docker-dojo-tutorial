@@ -555,360 +555,10 @@
 					</td>
 				</tr>
 			</table>
-		<h2> Linux on the Rocks </h2>
-			<p>
-				<img src="images/linux-logo.png" alt="Linux Logo" width="150" height="150">
-			</p>
-			<table>
-				<tr>
-					<td>
-						<h3> Pulling the ubuntu image. &#128039;</h3>
-					</td>
-					<td>
-						<img src="images/ubuntu-linux.png" alt="Ubuntu Logo" width="150" height="150">
-					</td>
-				</tr>
-				<tr>
-					<td>	
-						<h3> Please enter on commadline: </h3>
-					</td>	
-					<td>
-						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_025">docker pull ubuntu:24.04</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_025')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3> Checking the image status: &#128039; </h3>
-					<td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_026">docker image ls</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_026')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3> Starting a new ubuntu container: &#128640; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_027">docker run -it --name ubuntu-test ubuntu:24.04 bash</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_027')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3> Inside the ubuntu container: &#128521;</h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_os-release_028">cat /etc/os-release</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_os-release_028')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_028">apt update</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_028')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_029">apt install -y curl</code></pre>
-					</td>
-					<td>
-						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_029')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_030">curl --version</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_030')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<h3> Exiting the ubuntu container: &#128519; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_031">exit</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_031')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</td>
-				<tr>
-					<td>
-					<h3> Checking the container status: &#128039;</h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_032">docker container ls -a</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_032')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>,
-				<tr>
-					<td>
-					<h3> Restarting the ubuntu container: &#128640; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_033">docker container start -ai ubuntu-test</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_033')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<h3> The good thing is the changes remain in the ubuntu container: &#x1F4BC; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_034">which curl</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_034')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_034">history</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_034')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src="images/changes-remain-in-ubuntu-test.png" alt="Changes remain." width="300" height="200">
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<h3> Exiting the ubuntu container for good: &#128519; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_034">exit</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_034')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<h3> However, the ubuntu image remains unchanged! 	&#x26a0; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>
-							Only the container has changed, not the image! <br>
-							To change the image, you have to create a new image based on the changed container. <br>
-							When you start a new container from the unchanged image, the changes are gone. <br>
-							This is a key concept of Docker!
-						</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<h3> Pulling the debian image: &#128039;</h3>
-					</td>
-					<td>
-						<img src="images/debian-linux.png" alt="Debian Logo" width="150" height="150">
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_035">docker pull debian:12</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_035')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3> Checking the image status: &#128039;</h3>
-					<td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_036">docker image ls</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_036')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3> Starting a new debian container: &#128640; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_037">docker run -it --name debian-test debian:12 bash</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_037')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3> Inside the debian container: &#128521; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_038">apt update</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_038')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_039">apt install -y curl</code></pre>
-					</td>
-					<td>
-						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_039')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_040">curl --version</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_040')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<h3> Exiting the debian container: &#128519;</h3>
-					</td>	
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_041">exit</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_041')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</td>
-				</tr>
-				<tr>
-					<td>
-					<h3> Checking the container status: &#128039; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_042">docker container ls -a</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_042')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</td>
-				<tr>
-					<td>
-					<h3> Pulling the alpine image: &#128039; </h3>
-					</td>
-					<td>
-						<img src="images/alpine-linux.png" alt="Alpine Linux Logo" width="150" height="150">
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock">docker pull alpine:3.22</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3> Checking the image status: &#128039; </h3>
-					<td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_043">docker image ls</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_043')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3> Starting a new alpine container: &#128640; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_044">docker run -it --name alpine-test alpine:3.22 sh</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_044')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3> Inside the alpine container: &#128521; </h3>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_045">apk update</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_045')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<h3> Exiting the alpine container: &#128519; </h3>
-					</td>	
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_046">exit</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_046')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</td>
-			</table>
+
 <!---------------- Lifecycle section begins here ---------------------------------------------->
-		<h2> Lifecycle of a Docker Container </h2>
+
+			<h2> Lifecycle of a Docker Container </h2>
 			<p>
 				<img src="images/lifecycle.png" alt="Lifecycle image" width="200" height="200">
 			</p>
@@ -957,7 +607,7 @@
 				</tr>
 				<tr>
 					<td>
-						<pre><code id="codeBlock_lifecycle_003">docker image ls/code></pre>
+						<pre><code id="codeBlock_lifecycle_003">docker image ls </code></pre>
 						</td>
 						<td>
 						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -986,7 +636,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_lifecycle_003">docker container ls -a</code></pre>
+					<pre><code id="codeBlock_lifecycle_003">docker container ls -a </code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1276,7 +926,7 @@
 						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
 					</td>
 				</tr>
-		 		<tr>
+				<tr>
 					<td>
 					<pre><code id="codeBlock_lifecycle_001">docker stop pythonworld</code></pre>
 					</td>
@@ -1292,7 +942,7 @@
 						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
 					</td>
 				</tr>
-		 		<tr>
+				<tr>
 					<td>
 					<pre><code id="codeBlock_lifecycle_001">docker ps</code></pre>
 					</td>
@@ -1330,6 +980,773 @@
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_002')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+			</table>
+
+
+<!------------------------------ Linux Container Section ------------------------------->
+
+			<h2> Linux on the Rocks </h2>
+			<p>
+				<img src="images/linux-logo.png" alt="Linux Logo" width="150" height="150">
+			</p>
+			<table>
+				<tr>
+					<td>
+						<h3> Pulling the ubuntu image. &#128039;</h3>
+					</td>
+					<td>
+						<img src="images/ubuntu-linux.png" alt="Ubuntu Logo" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>	
+						<h3> Please enter on commadline: </h3>
+					</td>	
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_025">docker pull ubuntu:24.04</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_025')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Checking the image status: &#128039; </h3>
+					<td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_026">docker image ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_026')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Starting a new ubuntu container: &#128640; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_027">docker run -it --name ubuntu-test ubuntu:24.04 bash</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_027')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Inside the ubuntu container: &#128521;</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_os-release_028">cat /etc/os-release</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_os-release_028')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_028">apt update</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_028')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_029">apt install -y curl</code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_029')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_030">curl --version</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_030')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Exiting the ubuntu container: &#128519; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_031">exit</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_031')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</td>
+				<tr>
+					<td>
+					<h3> Checking the container status: &#128039;</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_032">docker container ls -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_032')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>,
+				<tr>
+					<td>
+					<h3> Restarting the ubuntu container: &#128640; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_033">docker container start -ai ubuntu-test</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_033')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> The good thing is the changes remain in the ubuntu container: &#x1F4BC; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_034">which curl</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_034')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_034">history</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_034')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/changes-remain-in-ubuntu-test.png" alt="Changes remain." width="300" height="200">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Exiting the ubuntu container for good: &#128519; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_034">exit</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_034')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> However, the ubuntu image remains unchanged! 	&#x26a0; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							Only the container has changed, not the image! <br>
+							To change the image, you have to create a new image based on the changed container. <br>
+							When you start a new container from the unchanged image, the changes are gone. <br>
+							This is a key concept of Docker!
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Finally let's have a look of a desktop version of ubuntu from within a browser: &#128519; </h3>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_046">docker run --rm -it --shm-size=512m -p 6901:6901 \ 
+						-e VNC_PW=password kasmweb/alpine-320-desktop:1.17.0 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_046')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please test in your web browser: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://localhost:6901" > http://localhost:6901 </a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							<ul>
+								<li>Username: kasm_user </li>							
+								<li>Password: password </li>
+							</ul>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Clean up afterwards: &#128521; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_047">docker container rm -f ubuntu-test</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_047')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_048">docker image rm ubuntu:24.04</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_048')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+			</table>
+		<h2> Debian: More Linux on the Rocks </h2>
+			<table>
+				<!--------------- Debian Section starts here --------------------------->
+				<tr>
+					<td>
+					<h3> Pulling the debian image: &#128039;</h3>
+					</td>
+					<td>
+						<img src="images/debian-linux.png" alt="Debian Logo" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_035">docker pull debian:12</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_035')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Checking the image status: &#128039;</h3>
+					<td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_036">docker image ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_036')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Checking the container status: &#128039;</h3>
+					<td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_036">docker container ls -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_036')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> In case the container doesn't exist, you can start a new debian container: &#128640; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							We are mapping port 8888 of the container to port 8888 of the host system. <br>
+							This is useful in case you want to run a web server or jupyter notebook inside the container. <br>
+							You can then access it from your host system via localhost:8888 <br>
+							The option -it is used to run the container in interactive mode with a terminal session. <br>
+							The option --name is used to give the container a name. <br>
+							The option bash is used to start a bash shell inside the container. <br>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_037">docker run -it -p 8888:8888 --name debian-test debian:12 bash</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_037')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> In case the container exists you can start the target container right away: &#128640; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_037">docker start -ai debian-test </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_037')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Inside the debian container: &#128521; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Let's first check it's a debian image: &#128270; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_038">cat /etc/os-release</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_038')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Let's ubdate the debian image: &#128225; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_038">apt update</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_038')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Let's install some DNS tools: &#128187; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_038">apt install -y dnsutils</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_038')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Let's install some other esential tools: &#128521; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_038">apt install -y curl weget git neovim python3-pip</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_038')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Let's install some esential development tools: &#128295; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_038">apt install build-essential</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_038')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Let's install some programming languages: &#128295; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_039">apt install -y golang nodejs npm </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_039')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Let's install good old java: &#128295; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_039">apt install -y default-jre default-jdk </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_039')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Let's install Jupyter Notbook for learning python: &#128295; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_039">apt install python3-notebook python3-pandas </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_039')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Let's create a user to play with Jupyter Notbook for learning python: &#128295; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_040">adduser charly</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_040')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+					<h3> Exiting the debian container: &#128519;</h3>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_041">exit</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_041')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Checking the container status: &#128039; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_042">docker container ls -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_042')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</td>
+				<tr>
+					<td>
+					<h3> Restarting the debian container: &#128640; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_042">docker container start -ai debian-test</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_042')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> The good thing is the changes remain in the debian container: &#x1F4BC; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_042">which jupyter</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_042')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_042">history</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_042')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/changes-remain-in-debian-test.png" alt="Changes in the debian remain." width="300" height="200">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Switch to the user to start Jupyter Notbook for learning python: &#128295; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_040">su - charly</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_040')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_040">pwd</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_040')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Start the Jupyter Notbook for learning python: &#128295; </h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_040">jupyter notebook</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_040')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							You can now open your web browser and go to http://localhost:8888 <br>
+							You will be asked for a token. You can find the token in the terminal where you started the Jupyter Notebook. <br>
+							Copy the token and paste it into the web browser. <br>
+							You can now create a new python notebook and start learning python! <br>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<ol>
+							<li>With CTRL-C you can stop Jupyter Notbook</li>
+							<li>Type exit to leave the user charly</li>
+							<li>Type exit to leave the debian container</li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> However, the debian image remains unchanged! 	&#x26a0; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							Only the container has changed, not the image! <br>
+							To change the image, you have to create a new image based on the changed container. <br>
+							When you start a new container from the unchanged image, the changes are gone. <br>
+							This is a key concept of Docker!
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Finally let's have a look of a desktop version of debian from within a browser: &#128519; </h3>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_046">docker run --rm -it --shm-size=512m -p 6901:6901 \ 
+						-e VNC_PW=password kasmweb/debian-bookworm-desktop:1.17.0  </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_046')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please test in your web browser: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://localhost:6901" > http://localhost:6901 </a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							<ul>
+								<li>Username: kasm_user </li>							
+								<li>Password: password </li>
+							</ul>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Clean up afterwards: &#128521; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_042">docker container rm -f debian-test</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_042')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_042">docker image rm debian:12</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_042')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<!--------------- Alpine Section starts here --------------------------->
+				<tr>
+					<td>
+					<h3> Pulling the alpine image: &#128039; </h3>
+					</td>
+					<td>
+						<img src="images/alpine-linux.png" alt="Alpine Linux Logo" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock">docker pull alpine:3.22</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Checking the image status: &#128039; </h3>
+					<td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_043">docker image ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_043')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Starting a new alpine container: &#128640; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_044">docker run -it --name alpine-test alpine:3.22 sh</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_044')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Inside the alpine container: &#128521; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_045">apk update</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_045')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Exiting the alpine container: &#128519; </h3>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_046">exit</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_046')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</td>
+				<tr>
+					<td>
+					<h3> Finally let's have a look of a desktop version of alpine from within a browser: &#128519; </h3>
+					</td>	
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_046">sudo docker run --rm -it --shm-size=512m -p 6901:6901 \ 
+						-e VNC_PW=password kasmweb/alpine-320-desktop:1.17.0 </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_046')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please test in your web browser: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://localhost:6901" > http://localhost:6901 </a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							<ul>
+								<li>Username: kasm_user </li>							
+								<li>Password: password </li>
+							</ul>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Clean up afterwards: &#128521; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_042">docker container rm -f alpine-test</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_042')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_042">docker image rm alpine:3.22</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_042')"><i class="bi bi-clipboard"></i> Copy</button>
 					</td>
 				</tr>
 			</table>
