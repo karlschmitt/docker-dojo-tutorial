@@ -984,7 +984,116 @@
 				</tr>
 			</table>
 
+<!------------------------------ Docker Port Mappings --------------------------------->
+<hr>
+			<h2> Publishing Ports </h2>
+			<h3> Docker Port Mappings  &#128187; </h3>
 
+			<p>
+				<img src="images/port-mapping.png" alt="Port Mapping image" width="200" height="200">	
+			</p>
+			<table>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: <h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_001">docker run -d -p 8080:80 --name nginx-test1 nginx:1.29-bookworm</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_001')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_002">docker run -d -p 8081:80 --name nginx-test2 nginx:1.29-alpine</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_002')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Verify port mapping: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_003">docker ps</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Please test in your web browser: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://localhost:8080" > http://localhost:8080 </a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://localhost:8081" > http://localhost:8081 </a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Get an overview again: </h3>
+					</td>
+				</tr>		
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_004">docker container ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_004')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_005">docker container ls -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_005')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Stop the containers: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_006">docker stop nginx-test1 nginx-test2</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_006')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Remove the containers: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_007">docker rm nginx-test1 nginx-test2</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_007')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+			</table>
+<hr>
 <!------------------------------ Linux Container Section ------------------------------->
 
 			<h2> Linux on the Rocks </h2>
@@ -1036,7 +1145,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_027">docker run -it --name ubuntu-test ubuntu:24.04 bash</code></pre>
+					<pre><code id="codeBlock_027">docker run -it -p 8888:8888 --name ubuntu-test ubuntu:24.04 bash</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_027')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1065,7 +1174,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_029">apt install -y curl</code></pre>
+					<pre><code id="codeBlock_029">apt install -y build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev</code></pre>
 					</td>
 					<td>
 						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_029')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1073,12 +1182,143 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_030">curl --version</code></pre>
+					<pre><code id="codeBlock_029">apt install -y neovim golang nodejs npm zip unzip curl wget git</code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_029')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/JurassicDenoLand.jpg" alt="Jurassic Deno Land." width="300" height="200">	
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_029">curl -fsSL https://deno.land/install.sh | sh </code></pre>
+					</td>
+					<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_029')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_030">apt install -y default-jre default-jdk</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_030')"><i class="bi bi-clipboard"></i> Copy</button>
 					</td>
 				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_030">apt install -y python-numpy python-pandas</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_030')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_030">apt install -y jupyter-notebook</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_030')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/Lucy_van_Pelt.png" alt="Lucy van Pelt" width="100" height="200">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Create user: &#128112; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_030">adduser lucy</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_030')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Switch to user Lucy: &#128120 </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_030">su - lucy</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_030')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Run Jupyter Notebook: &#127776; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_030">jupyter notebook</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_030')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h3> Stopping Jupyter Notebook: &#128587; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_031"> STRG + Z </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_031')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</td>
+				<tr>
+					<td>
+					<h3> You might want to download a nerd font: &#128587; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							Make sure you are in the lucy home directory. 																																																																																																																																																																																																																																																							 <br>
+						</p>
+					</td>
+				</tr>
+				<tr>																																																																																																																																																												
+					<td>
+					<pre><code id="codeBlock_031"> wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
+							&& cd ~/.local/share/fonts \
+							&& unzip JetBrainsMono.zip \
+							&& rm JetBrainsMono.zip \
+							&& fc-cache -fv </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_031')"><i class="bi bi-clipboard"></i> Copy</button>																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																					
+					</td>
+				</td>
+				<tr>
+					<td>
+					<h3> Exiting the user: &#128587; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_031">exit</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_031')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</td>
 				<tr>
 					<td>
 					<h3> Exiting the ubuntu container: &#128519; </h3>
@@ -1137,11 +1377,6 @@
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_034')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src="images/changes-remain-in-ubuntu-test.png" alt="Changes remain." width="300" height="200">
 					</td>
 				</tr>
 				<tr>
