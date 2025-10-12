@@ -47,7 +47,7 @@
 
 			</tr>
 		</table>
-		<h2> Just in case you don't have docker installed jet</h2>
+		<h2> Just in case you don't have docker installed on your local machine.</h2>
 			<table>
 				<tr>
 					<td>
@@ -57,6 +57,22 @@
 				<tr>
 					<td>
 						<a href="https://labs.play-with-docker.com/" > Play with docker </a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+						In case you go with <a href="https://labs.play-with-docker.com">play with docker</a> 
+						you can verify the operating system with the following command:
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code id="codeBlock_001"> cat /etc/os-release </code></pre>
+						</td>
+						<td>
+						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_001')"><i class="bi bi-clipboard"></i> Copy</button>
 					</td>
 				</tr>
 			</table>
@@ -168,12 +184,28 @@
 				</tr>
 				<tr>
 					<td>
-					<h3>Always remove the containers first, therefore list the containers:</h3>
+					<h3>For cleanup, always remove the containers first, therefore list the containers:</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li>First remove the containers</li>
+							<li>Second remove the images</li>
+						</ul>
 					</td>
 				</tr>
 				<tr>
 					<td>
 					<pre><code  id="codeBlock_removing_001">docker container ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_removing_001')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code  id="codeBlock_removing_001">docker container ls -a</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_removing_001')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -214,7 +246,7 @@
 					</td>
 				</tr>
 			</table> 
-
+<hr>
 		<h2>Testing your Docker Desktop installation: </h2>
 			<p>
 				<img src="images/Testing-Docker.png" alt="Testing Docker Logo" width="200" height="200">
@@ -226,6 +258,13 @@
 					</td>
 					<td>
 						<img src="images/terminal-prompt.png" alt="Terminal image" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+						In this exercise we will pull two different nginx images and run them in parallel on your host system.
+						</p>
 					</td>
 				</tr>
 				<tr>
@@ -245,6 +284,30 @@
 						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_008')"><i class="bi bi-clipboard"></i> Copy</button>
 					</td>
 				</tr>
+				<tr>
+					<td>
+						<h3>Checking the image status: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_008"> docker image ls </code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_008')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/Docker_Port_Mapping_One.png" alt="Terminal image" width="900" height="400">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+						Now we will run two nginx containers in parallel, each one mapped to a different port on your host system.
+						</p>
+					</td>
 				<tr>
 					<td>
 						<pre><code id="codeBlock_009"> docker container run -d --name nginx-test1 -p 8080:80 nginx:1.29-bookworm </code></pre>
@@ -295,7 +358,7 @@
 				</tr>
 				<tr>
 					<td>
-						<h3> In case you can run a browser on your host system, please test in your web browser: </h3>
+						<h3> In case you can run a browser on your host system, please test using your web browser: </h3>
 					</td>
 				</tr>
 				<tr>
@@ -362,6 +425,7 @@
 					</td>
 				</tr>
 			</table>
+<hr>
 		<h2> Learning by doing </h2>
 			<table>
 				<tr>
@@ -382,7 +446,7 @@
 				</tr>
 				<tr>
 					<td>
-						<h3> Please test in your web browser: </h3>
+						<h3> Please test using your web browser: </h3>
 					</td>
 				</tr>
 				<tr>
@@ -391,6 +455,7 @@
 					</td>
 				</tr>
 			</table>
+<hr>
 		<h2> Hello World Tratition</h2>
 			<p>
 				<img src="images/Hello-World.png" alt="Hello-World Logo" width="300" height="200">
@@ -729,15 +794,7 @@
 				</tr>
 				<tr>
 					<td>
-						<pre><code id="codeBlock_lifecycle_003">python3 --version</code></pre>
-					</td>
-					<td>
-						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<pre><code id="codeBlock_lifecycle_003">print("Hello Docker World!")</code></pre>
+						<pre><code id="codeBlock_lifecycle_003">print("Hello Python World!")</code></pre>
 					</td>
 					<td>
 						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_003')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -868,7 +925,7 @@
 				</tr>
 				<tr>
 					<td>
-						<h3>To verify that the Docker container is pausing:::</h3>
+						<h3>To verify that the Docker container is pausing:</h3>
 					</td>
 				</tr>
 				<tr>
@@ -952,6 +1009,14 @@
 				</tr>
 				<tr>
 					<td>
+					<pre><code id="codeBlock_lifecycle_001">docker ps -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_lifecycle_001')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<h3> Now invoke the remove command: &#128521; <h3>
 					</td>
 					<td>
@@ -995,6 +1060,11 @@
 			<table>
 				<tr>
 					<td>
+						<img src="images/Docker_Port_Mapping_Two.png" alt="Port Mapping image" width="800" height="600">
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<h3> Please enter on commadline: <h3>
 					</td>
 					<td>
@@ -1019,12 +1089,33 @@
 				</tr>
 				<tr>
 					<td>
-						<h3> Verify port mapping: </h3>
+						<h3> Verify port mapping using docker: </h3>
 					</td>
 				</tr>
 				<tr>
 					<td>
 					<pre><code id="codeBlock_portmapping_003">docker ps</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Verify both HTTP Servers provide their service: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_003">curl -I localhost:8080</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_003')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_003">curl -I localhost:8081</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_003')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1060,14 +1151,6 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_portmapping_005">docker container ls -a</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_005')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
 						<h3> Stop the containers: </h3>
 					</td>
 				</tr>
@@ -1081,12 +1164,41 @@
 				</tr>
 				<tr>
 					<td>
+					<pre><code id="codeBlock_portmapping_005">docker container ls -a</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_005')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<h3> Remove the containers: </h3>
 					</td>
 				</tr>
 				<tr>
 					<td>
 					<pre><code id="codeBlock_portmapping_007">docker rm nginx-test1 nginx-test2</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_007')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Remove the images: </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_007">docker image rm -f nginx:1.29-bookworm</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_007')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_portmapping_007">docker image rm -f nginx:1.29-alpine</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_portmapping_007')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1132,7 +1244,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_026">docker image ls</code></pre>
+					<pre><code id="codeBlock_026">docker images </code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_026')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1182,7 +1294,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_029">apt install -y neovim golang nodejs npm zip unzip curl wget git</code></pre>
+					<pre><code id="codeBlock_029">apt install -y vim neovim golang nodejs npm zip unzip curl wget git tmux</code></pre>
 					</td>
 					<td>
 						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_029')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1597,7 +1709,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_038">apt install -y curl weget git neovim python3-pip</code></pre>
+					<pre><code id="codeBlock_038">apt install -y curl weget git vim neovim tmux</code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_038')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1636,7 +1748,7 @@
 				</tr>
 				<tr>
 					<td>
-					<pre><code id="codeBlock_039">apt install -y default-jre default-jdk </code></pre>
+					<pre><code id="codeBlock_039">apt install -y default-jre default-jdk mavon gradle</code></pre>
 					</td>
 					<td>
 						<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_039')"><i class="bi bi-clipboard"></i> Copy</button>
