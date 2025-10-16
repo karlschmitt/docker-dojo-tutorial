@@ -134,7 +134,7 @@
 				</tr>
 				<tr>
 					<td>
-						<h3> Please enter on commadline: <h3>
+						<h3> Please enter on commadline: &#128229;<h3>
 					</td>
 					<td>
 						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
@@ -463,7 +463,7 @@
 			<table>
 				<tr>
 					<td>
-						<h3> Please enter on commadline: <h3>
+						<h3> Please enter on commadline: &#128229;<h3>
 					</td>
 					<td>
 						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
@@ -656,7 +656,7 @@
 				</tr>
 				<tr>
 					<td>
-						<h3> Please enter on commadline: <h3>
+						<h3> Please enter on commadline: &#128229;<h3>
 					</td>
 					<td>
 						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
@@ -1048,7 +1048,253 @@
 					</td>
 				</tr>
 			</table>
-
+<!-----------Exporing the latest Java Version ------------------------>
+			<h2>Exploring the latest Java Version &#127760;</h2>
+			<p>
+				<img src="images/java-logo.png" alt="Java Logo" width="150" height="150">
+			</p>
+			<table>
+				<tr>
+					<td>
+						<h3> Please enter on commadline: &#128229;<h3>
+					</td>
+					<td>
+						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_001">docker pull eclipse-temurin:latest</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_001')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Checking the image status: &#x1F50E; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_002">docker images</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_002')"><i class="bi bi-clipboard"></i> Copy</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_003">docker image ls</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_003')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> The following docker command provides you with the Java version: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_004">docker run -it --rm eclipse-temurin:latest java -version</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_004')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's further explore the image by starting a container with a port mapping: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_005">docker run -it --name java-playground -p 8080:8080 eclipse-temurin:latest bash</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's see what kind of operating system is used: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_006">cat /etc/os-release</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's check the java compiler: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_007">javac -verson</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's install some useful tools: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_008">apt install -y vim neovim golang nodejs npm zip unzip curl wget git tmux</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's install some java build tools: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_009">apt install -y maven gradle</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's create a user: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_010">adduser alice</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's switch to the user: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_011">su - alice</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's create a spring boot application using maven: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							In the following interactive mode just type java and then select a spring boot option.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							<ul>
+								<li> groupId: alice </li>
+								<li> artifactId: becky </li>
+								<li> version: 0.0.1-SNAPSHOT </li>
+								<li> package: alice </li>
+							</ul>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_012">mvn archetype:generate</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's compile and package the spring boot application: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							First move into your project directory, e.g.: cd alice
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_013">mvn clean compile package</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's run the spring boot application: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_014">mvn sping-boot:run</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's test using curl on the host machine: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<pre><code id="codeBlock_java_014">curl -I localhost:8080</code></pre>
+					</td>
+					<td>
+					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_java_005')"><i class="bi bi-clipboard"></i> Copy</button>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3> Let's test using a browser on the host machine: &#128187; </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://localhost:8080/" > http://localhost:8080/ </a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li><h3> Let's stop the spring boot application using CRTL + C &#128187; </h3></li>
+							<li><h3> Let's exit the user, using the exit command.</h3></li>
+							<li><h3> Let's exit the container, again using the exit command.</h3></li>
+							<li><h3> Let's keep the the container for furher exploration.</h3></li>
+						</ul>
+						
+					</td>
+				</tr>
+			</table>
 <!------------------------------ Docker Port Mappings --------------------------------->
 <hr>
 			<h2> Publishing Ports </h2>
@@ -1223,7 +1469,7 @@
 				</tr>
 				<tr>
 					<td>	
-						<h3> Please enter on commadline: </h3>
+						<h3> Please enter on commadline: &#128229;</h3>
 					</td>	
 					<td>
 						<img src="images/terminal-prompt.png" alt="Terminal immage" width="150" height="150">
@@ -1527,7 +1773,7 @@
 				<tr>
 					<td>
 					<pre><code id="codeBlock_046">docker run --rm -it --shm-size=512m -p 6901:6901 \ 
-						-e VNC_PW=password kasmweb/alpine-320-desktop:1.17.0 </code></pre>
+						-e VNC_PW=password kasmweb/ubuntu-jammy-desktop:1.17.0 </code></pre>
 					</td>
 					<td>
 					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_046')"><i class="bi bi-clipboard"></i> Copy</button>
@@ -1555,25 +1801,9 @@
 				</tr>
 				<tr>
 					<td>
-					<h3> Clean up afterwards: &#128521; </h3>
+					<h3> Let's keep the ubuntu container for further exploration. &#128521; </h3>
 					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_047">docker container rm -f ubuntu-test</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_047')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					<pre><code id="codeBlock_048">docker image rm ubuntu:24.04</code></pre>
-					</td>
-					<td>
-					<button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode('codeBlock_048')"><i class="bi bi-clipboard"></i> Copy</button>
-					</td>
-				</tr>
+				</tr>				
 			</table>
 		<h2> Debian: More Linux on the Rocks </h2>
 			<table>
@@ -2119,7 +2349,7 @@
 				</tr>
 				<tr>
 					<td>	
-						<h3> Please enter on commadline: </h3>
+						<h3> Please enter on commadline: &#128229; </h3>
 					</td>
 					<td>
 						<img src="images/terminal-prompt.png" alt="Terminal image" width="150" height="150">
@@ -2256,7 +2486,7 @@
 				</tr>
 				<tr>
 					<td>	
-						<h3> Please enter on commadline: </h3>
+						<h3> Please enter on commadline: &#128229;</h3>
 					</td>
 					<td>
 						<img src="images/terminal-prompt.png" alt="Terminal image" width="150" height="150">
